@@ -1,0 +1,14 @@
+<h1>This is the page for a specific user </h1>
+
+ First name : <%=  @user.fname %>
+ <br>
+ Last name : <%=  @user.lname %>
+ <br>
+ Email address : <%= @user.email %>
+ <br>
+ <br>
+
+ <%= link_to " Delete account" , user_path(params[:id]), method: :delete, confirm: "ARE YOU SURE YOU WANT TO DELETE YOUR ACCOUNT ?" %>
+
+
+

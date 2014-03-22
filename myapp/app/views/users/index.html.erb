@@ -1,0 +1,12 @@
+<h1>This page displays all the users </h1>
+
+<% @users.each do |user|%>
+ First name : <%= user.fname%>
+  <br>
+ Last name : <%= user.lname%> 
+  <br>
+ Email address : <%= user.email%>
+ <br>
+ <br>
+
+<% end %>

@@ -1,0 +1,12 @@
+<h1> This page display all the Users posts </h1>
+
+
+<% @posts.each do |post|%>
+  Post number <%= post.id %>
+  <br>
+  Title : <%= post.title%>
+  <br>
+  Content: <%= post.content %>
+  <br><br>
+
+<% end %>
