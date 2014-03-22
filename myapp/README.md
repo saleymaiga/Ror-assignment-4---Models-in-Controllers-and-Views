@@ -1,6 +1,6 @@
 == Assignement instructions 
 
-Assignment 
+
 
 1. Make a new Rails app from the ground up. Create a User model and a Post model. 
    Associate the models so that one User can have many Posts. 
