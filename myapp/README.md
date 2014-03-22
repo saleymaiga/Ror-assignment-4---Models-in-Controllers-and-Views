@@ -9,6 +9,4 @@
    all the users at /users, and the ability to delete a user by sending a DELETE request to /
    users/:id. 
 
-3. Create a nested resource for posts (see http://guides.rubyonrails.org/
-   routing.html#nested-resources) that allows you to see all of a user’s posts at /users/:id/
-   posts
+3. Create a nested resource for posts that allows you to see all of a user’s posts at          => /users/:id/posts
