@@ -51,7 +51,7 @@ class UsersController < ApplicationController
     
 
     def update
-    	@user =User.find(params[:id])
+    	@user =User.find(params[:id])   #Better use this method  @user = User.where(id: params[:id]).first
     	if @user.update_attributes(params[:user])
     		flash[:notice] = "your account was updated successfully"
     		redirect_to user_path
@@ -60,7 +60,6 @@ class UsersController < ApplicationController
     		redirect_to edit_user
 
     	end
-
 
     end
 
