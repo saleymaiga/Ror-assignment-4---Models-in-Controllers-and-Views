@@ -1,5 +1,7 @@
 Myapp::Application.routes.draw do
 
+     root "users#index"
+
      get "/" =>"users#homepage"
      get "/users/posts" => "posts#posts"  
 
