@@ -1,0 +1,18 @@
+<h1>This is the search page</h1>
+
+
+
+
+
+<%= form_tag "/search" ,method: :get do %>
+ <%=label_tag(:query, "Search:") %>
+ <%=text_field_tag(:query) %>
+ <%=submit_tag("Submit") %>
+<% end %>
+
+<% if @users %>
+  <% @users.each do |user| %>
+    <%= user.fname %>
+  <% end %>
+	
+<% end %>
