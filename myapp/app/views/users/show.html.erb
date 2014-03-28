@@ -12,6 +12,9 @@
 
 
 <%= link_to "Update User info", edit_user_path  %>
+
+<%= distance_of_time_in_words(Time.now, @user.created_at) %>
+
    
 
 

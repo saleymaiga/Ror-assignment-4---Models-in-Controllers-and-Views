@@ -32,7 +32,8 @@ class UsersController < ApplicationController
 
 
 	def create 
-		@user = User.new(params[:user])
+		@user = User.create(user_params)
+
 		if @user.save
 			flash[:notice] = "User was saved successfully"
             redirect_to root_path
@@ -52,7 +53,7 @@ class UsersController < ApplicationController
 
     def update
     	@user =User.find(params[:id])   # ==>   @user = User.where(id: params[:id]).first
-    	if @user.update_attributes(params[:user])
+    	if @user.update_attributes(user_params) #we replace params[:user] with user_params
     		flash[:notice] = "your account was updated successfully"
     		redirect_to user_path
     	else
@@ -62,6 +63,24 @@ class UsersController < ApplicationController
     	end 
 
     end
+
+
+
+
+    private
+
+
+    def user_params
+    	params.require(:user).permit(:fname, :lname, :email)
+      
+      
+    end
+
+
+
+
+
+
 
 end
 
