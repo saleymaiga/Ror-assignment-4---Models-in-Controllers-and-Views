@@ -53,7 +53,7 @@ class UsersController < ApplicationController
 
     def update
     	@user =User.find(params[:id])   # ==>   @user = User.where(id: params[:id]).first
-    	if @user.update_attributes(user_params) #we replace params[:user] with user_params
+    	if @user.update_attributes(user_params) # replace params[:user] with user_params
     		flash[:notice] = "your account was updated successfully"
     		redirect_to user_path
     	else
@@ -72,8 +72,7 @@ class UsersController < ApplicationController
 
     def user_params
     	params.require(:user).permit(:fname, :lname, :email)
-      
-      
+        
     end
 
 
